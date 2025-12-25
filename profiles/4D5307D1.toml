@@ -1,0 +1,23 @@
+# Perfil: Gears of War
+# Title ID: 4D5307D1
+
+[profile]
+title_id = "4D5307D1"
+game_name = "Gears of War"
+description = "Perfil para Gears of War - Primera entrega de la saga"
+
+[recomp]
+target_arch = "x64"
+optimize_level = 2
+skip_functions = ["__security_check"]
+
+[patches]
+apply_vsync_fix = true
+fix_audio_stutter = false
+skip_intro_videos = true
+# Parches específicos de Gears
+fix_cover_system = true
+improve_texture_streaming = true
+
+[custom]
+output_dir = "build/gears1"

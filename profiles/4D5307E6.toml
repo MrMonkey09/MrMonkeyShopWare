@@ -1,0 +1,24 @@
+# Perfil: Halo 3
+# Title ID: 4D5307E6
+
+[profile]
+title_id = "4D5307E6"
+game_name = "Halo 3"
+description = "Perfil optimizado para Halo 3 - Configuración de recompilación probada"
+
+[recomp]
+target_arch = "x64"
+optimize_level = 2
+# Funciones a omitir en la recompilación
+skip_functions = ["__security_check", "__stack_chk_fail"]
+
+[patches]
+# Parches conocidos para Halo 3
+apply_vsync_fix = true
+fix_audio_stutter = true
+skip_intro_videos = false
+# Parche específico de Halo 3
+fix_network_timeouts = true
+
+[custom]
+output_dir = "build/halo3"

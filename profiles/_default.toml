@@ -1,0 +1,22 @@
+# Perfil por defecto
+# Se aplica cuando no existe un perfil específico para el Title ID
+
+[profile]
+title_id = "00000000"
+game_name = "Default"
+description = "Perfil por defecto - configuración base para todos los juegos"
+
+[recomp]
+# Configuración de recompilación por defecto
+target_arch = "x64"
+optimize_level = 1
+
+[patches]
+# Parches desactivados por defecto
+apply_vsync_fix = false
+fix_audio_stutter = false
+skip_intro_videos = false
+
+[custom]
+# Valores personalizados para project.toml
+output_dir = "build"

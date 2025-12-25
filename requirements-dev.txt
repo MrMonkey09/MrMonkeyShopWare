@@ -1,0 +1,8 @@
+# Dependencias de desarrollo
+pytest>=7.0
+pytest-cov
+black
+isort
+flake8
+mypy
+pre-commit

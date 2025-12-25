@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  xenonrecomp:
+    build: .
+    container_name: xenonrecomp
+    volumes:
+      - ./workspace:/workspace
+    stdin_open: true
+    tty: true
