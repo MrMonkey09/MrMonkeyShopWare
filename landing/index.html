@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MrMonkeyShopWare</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+
+        .step-card {
+            transition: all 0.3s ease;
+        }
+
+        .step-card.active {
+            border-left: 4px solid #4f46e5;
+            background-color: #f8fafc;
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center gap-2">
+                    <span class="text-2xl">🎮</span>
+                    <span class="font-bold text-lg tracking-tight text-slate-900">Xbox 360 a PC</span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#paradigma" class="hover:text-indigo-600 transition-colors">Paradigma</a>
+                    <a href="#arquitectura" class="hover:text-indigo-600 transition-colors">Arquitectura</a>
+                    <a href="#caso-estudio" class="hover:text-indigo-600 transition-colors">Unleashed</a>
+                    <a href="#ecosistema" class="hover:text-indigo-600 transition-colors">MrMonkeyShopWare</a>
+                    <a href="#legalidad" class="hover:text-emerald-600 transition-colors">⚖️ Legalidad</a>
+                    <a href="#taller"
+                        class="px-4 py-2 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition-colors">Tutorial</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-white border-b border-slate-200 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">
+                De Consola a <span class="text-indigo-600">Nativo</span>
+            </h1>
+            <p class="mt-4 max-w-2xl mx-auto text-xl text-slate-600">
+                La recompilación estática transforma binarios de Xbox 360 en ejecutables reales de PC.
+                Sin emulación. Sin latencia. Preservación pura.
+            </p>
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <a href="#paradigma"
+                    class="rounded-full bg-slate-100 px-6 py-2.5 text-sm font-semibold text-slate-900 hover:bg-slate-200 transition-colors">
+                    Leer Estudio
+                </a>
+                <a href="#legalidad"
+                    class="rounded-full bg-emerald-600 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-emerald-500 transition-colors">
+                    ⚖️ Marco Legal
+                </a>
+                <a href="https://github.com/MrMonkey09/MrMonkeyShopWare" target="_blank" rel="noopener noreferrer"
+                    class="rounded-full bg-slate-900 px-6 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-slate-800 transition-colors flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    Ver Repositorio
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-24">
+
+        <!-- Module 1: Paradigm Shift -->
+        <section id="paradigm" class="scroll-mt-24">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">El Cambio de Paradigma</h2>
+                    <p class="text-lg text-slate-600 mb-6 leading-relaxed">
+                        Históricamente, la preservación dependía de la <strong>emulación</strong>: interpretación en
+                        tiempo real costosa e imprecisa. La <strong>recompilación estática</strong> rompe este esquema
+                        traduciendo el juego <em>antes</em> de ejecutarlo.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-start">
+                            <span
+                                class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-600 mt-1">✓</span>
+                            <span class="ml-3 text-slate-700"><strong>Latencia Cero:</strong> Input lag idéntico a un
+                                juego de PC moderno.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span
+                                class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-600 mt-1">✓</span>
+                            <span class="ml-3 text-slate-700"><strong>Hardware Moderno:</strong> Uso del 100% de la
+                                CPU/GPU (AVX, Vulkan/DX12).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span
+                                class="flex-shrink-0 h-6 w-6 flex items-center justify-center rounded-full bg-indigo-100 text-indigo-600 mt-1">✓</span>
+                            <span class="ml-3 text-slate-700"><strong>Vida Eterna:</strong> Ejecutable independiente, no
+                                atado a un emulador específico.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-lg border border-slate-100">
+                    <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-4 text-center">
+                        Comparativa de Rendimiento</h3>
+                    <div class="chart-container">
+                        <canvas id="paradigmChart"></canvas>
+                    </div>
+                    <p class="text-xs text-center text-slate-400 mt-4">Datos ilustrativos basados en métricas de
+                        overhead de CPU.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 2: Core Architecture (Tabs) -->
+        <section id="arquitectura" class="scroll-mt-24">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-slate-900">Arquitectura del Núcleo</h2>
+                <p class="mt-4 text-slate-600 max-w-3xl mx-auto">
+                    Explora cómo XenonRecomp y XenosRecomp desmantelan la compleja arquitectura de la Xbox 360 (PowerPC
+                    Big-Endian) para reconstruirla en x86_64.
+                </p>
+            </div>
+
+            <!-- Tab Navigation -->
+            <div class="flex justify-center mb-8 border-b border-slate-200">
+                <button onclick="switchTab('cpu')" id="tab-cpu"
+                    class="px-8 py-3 text-sm font-medium border-b-2 border-indigo-600 text-indigo-600 focus:outline-none transition-colors">
+                    CPU: XenonRecomp
+                </button>
+                <button onclick="switchTab('gpu')" id="tab-gpu"
+                    class="px-8 py-3 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-indigo-600 focus:outline-none transition-colors">
+                    GPU: XenosRecomp
+                </button>
+            </div>
+
+            <!-- CPU Content -->
+            <div id="content-cpu" class="grid lg:grid-cols-3 gap-8">
+                <!-- Process Steps -->
+                <div class="col-span-1 space-y-4">
+                    <div class="p-4 bg-white rounded-lg shadow-sm border border-slate-200 cursor-pointer hover:border-indigo-400 step-card active"
+                        onclick="showStep('step1')">
+                        <h4 class="font-bold text-slate-900">1. Análisis de Flujo</h4>
+                        <p class="text-xs text-slate-500 mt-1">XenonAnalyse & Jump Tables</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow-sm border border-slate-200 cursor-pointer hover:border-indigo-400 step-card"
+                        onclick="showStep('step2')">
+                        <h4 class="font-bold text-slate-900">2. Traducción</h4>
+                        <p class="text-xs text-slate-500 mt-1">PowerPC a C++ & Endianness</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-lg shadow-sm border border-slate-200 cursor-pointer hover:border-indigo-400 step-card"
+                        onclick="showStep('step3')">
+                        <h4 class="font-bold text-slate-900">3. Abstracción (HLE)</h4>
+                        <p class="text-xs text-slate-500 mt-1">Syscalls & XDK a Win32/Linux</p>
+                    </div>
+                </div>
+
+                <!-- Detail View -->
+                <div
+                    class="col-span-2 bg-slate-900 text-slate-200 rounded-xl p-8 flex flex-col justify-center relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10 text-6xl font-mono">XENON</div>
+                    <div id="cpu-detail-title" class="text-2xl font-bold text-white mb-4">1. Análisis de Flujo
+                        (XenonAnalyse)</div>
+                    <div id="cpu-detail-text" class="text-slate-300 leading-relaxed">
+                        Un binario original es un "mar de números". El análisis identifica las <strong>Jump
+                            Tables</strong> (tablas de salto) para mapear el flujo del código. Sin esto, el recompilador
+                        no sabría qué parte del código es una función ejecutable y qué parte son simples datos.
+                    </div>
+                    <div class="mt-6 p-4 bg-slate-800 rounded border border-slate-700 font-mono text-xs text-green-400">
+                        <span id="code-snippet">
+                            > XenonAnalyse.py --input default.xex<br>
+                            > Scanning for function epilogues...<br>
+                            > Found 14,203 functions.<br>
+                            > Identifying jump tables... OK.
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GPU Content (Hidden by default) -->
+            <div id="content-gpu" class="hidden grid lg:grid-cols-2 gap-12 items-center">
+                <div class="order-2 lg:order-1">
+                    <h3 class="text-2xl font-bold text-slate-900 mb-4">La Revolución Visual: Xenos</h3>
+                    <p class="text-slate-600 mb-4">
+                        La GPU Xenos usaba microcódigo de bajo nivel. <strong>XenosRecomp</strong> realiza una
+                        traducción estática de este microcódigo a HLSL moderno.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-indigo-500 shadow-sm">
+                            <h4 class="font-bold text-slate-900">Microcódigo ➔ HLSL</h4>
+                            <p class="text-sm text-slate-600">Traducción directa compatible con DirectX 12 o Vulkan.
+                                Elimina el "Shader Stutter".</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-purple-500 shadow-sm">
+                            <h4 class="font-bold text-slate-900">Mapeo de Registros</h4>
+                            <p class="text-sm text-slate-600">Tabla de traducción para que la GPU moderna entienda la
+                                memoria de video de la 360.</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg border-l-4 border-emerald-500 shadow-sm">
+                            <h4 class="font-bold text-slate-900">Vertex Fetch Constant</h4>
+                            <p class="text-sm text-slate-600">Emulación precisa usando ByteAddressBuffers para una
+                                imagen 1:1.</p>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="order-1 lg:order-2 bg-slate-100 rounded-xl p-6 flex flex-col items-center justify-center border border-slate-200">
+                    <!-- Conceptual Flow Diagram using HTML/CSS -->
+                    <div class="flex flex-col items-center space-y-2 w-full max-w-md">
+                        <div class="w-full bg-slate-800 text-white p-3 rounded text-center font-mono text-sm">Xenos
+                            Microcode (Binario)</div>
+                        <div class="text-slate-400">⬇️</div>
+                        <div
+                            class="w-full bg-indigo-600 text-white p-3 rounded text-center font-bold shadow-lg transform scale-105">
+                            XenosRecomp (Traductor)</div>
+                        <div class="text-slate-400">⬇️</div>
+                        <div class="w-full bg-slate-800 text-white p-3 rounded text-center font-mono text-sm">HLSL
+                            (DirectX 12 / Vulkan)</div>
+                    </div>
+                    <p class="mt-6 text-center text-xs text-slate-500">
+                        Resultado: Gráficos a resolución nativa 4K con cero penalización de rendimiento.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 3: Case Study -->
+        <section id="caso-estudio" class="bg-indigo-50 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-16">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div>
+                        <div
+                            class="inline-block bg-indigo-600 text-white px-3 py-1 rounded-full text-xs font-bold mb-4 uppercase">
+                            Estudio de Caso</div>
+                        <h2 class="text-3xl font-bold text-slate-900 mb-6">Sonic Unleashed: Modernizando el Motor</h2>
+                        <p class="text-slate-700 mb-6 leading-relaxed">
+                            <strong>UnleashedRecomp</strong> no es solo un port; es una reingeniería completa. Demuestra
+                            cómo superar limitaciones físicas del hardware original.
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                            <div class="bg-white p-4 rounded shadow-sm">
+                                <div class="text-2xl font-bold text-indigo-600">60+ FPS</div>
+                                <div class="text-xs text-slate-500">Parcheo de Físicas Havok</div>
+                            </div>
+                            <div class="bg-white p-4 rounded shadow-sm">
+                                <div class="text-2xl font-bold text-indigo-600">Multihilo</div>
+                                <div class="text-xs text-slate-500">Renderizador DX12/Vulkan</div>
+                            </div>
+                        </div>
+                        <p class="text-sm text-slate-600 italic">
+                            "Parallel Transfer Queues aprovecha el bus PCIe para una carga de assets ultrarrápida,
+                            eliminando tiempos de carga."
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg">
+                        <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-4">Simulación de
+                            Frame Pacing</h3>
+                        <div class="chart-container">
+                            <canvas id="unleashedChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 4: Ecosystem & MrMonkeyShopWare -->
+        <section id="ecosistema" class="scroll-mt-24">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl font-bold text-slate-900">El Ecosistema y MrMonkeyShopWare</h2>
+                <p class="mt-4 text-slate-600">
+                    Mientras XenonRecomp provee la tecnología, <strong>MrMonkeyShopWare</strong> provee la estructura de
+                    gestión y legalidad necesaria para la sostenibilidad del proyecto.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Standard Tech Card -->
+                <div class="border border-slate-200 rounded-xl p-8 hover:shadow-md transition-shadow">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-2xl">⚙️</span>
+                        <h3 class="text-xl font-bold text-slate-800">Núcleo Técnico (Xenon/Unleashed)</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-600 text-sm">
+                        <li class="flex gap-2"><span class="text-slate-400">•</span> Alta complejidad en traducción
+                            PowerPC a C++.</li>
+                        <li class="flex gap-2"><span class="text-slate-400">•</span> Enfoque puramente en ingeniería
+                            inversa.</li>
+                        <li class="flex gap-2"><span class="text-slate-400">•</span> Distribución manual y fragmentada.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- MrMonkeyShopWare Card -->
+                <div
+                    class="border-2 border-indigo-100 bg-indigo-50/50 rounded-xl p-8 hover:shadow-lg transition-shadow relative overflow-hidden">
+                    <div
+                        class="absolute top-0 right-0 bg-indigo-600 text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
+                        FRAMEWORK</div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-2xl">⚖️</span>
+                        <h3 class="text-xl font-bold text-indigo-900">MrMonkeyShopWare</h3>
+                    </div>
+                    <ul class="space-y-3 text-slate-700 text-sm">
+                        <li class="flex gap-2">
+                            <span class="text-indigo-500 font-bold">✓</span>
+                            <span><strong>Capa de Gestión:</strong> Estándar para organizar comunidades Open
+                                Source.</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-indigo-500 font-bold">✓</span>
+                            <span><strong>Seguridad Legal:</strong> Documentación explícita y ética ("Clean
+                                Room").</span>
+                        </li>
+                        <li class="flex gap-2">
+                            <span class="text-indigo-500 font-bold">✓</span>
+                            <span><strong>Acceso Facilitado:</strong> Potencial "ShopWare" para distribución legal de
+                                parches.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Unified Architecture Diagram -->
+            <div class="mt-12 bg-white rounded-xl shadow-sm border border-slate-200 p-8">
+                <h4 class="text-center font-bold text-slate-900 mb-8">Arquitectura Unificada: Gestión + Técnica</h4>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-sm">
+                    <div class="bg-indigo-900 text-white p-4 rounded-lg text-center w-full md:w-auto shadow-lg">
+                        <div class="font-bold">MrMonkeyShopWare</div>
+                        <div class="text-indigo-300 text-xs">Bases Legales y Comunidad</div>
+                    </div>
+                    <div class="text-slate-400 hidden md:block">➔</div>
+                    <div class="text-slate-400 md:hidden">⬇️</div>
+                    <div
+                        class="border-2 border-dashed border-slate-300 p-4 rounded-lg text-center w-full md:w-auto bg-slate-50">
+                        <div class="font-bold text-slate-700">Entorno Seguro</div>
+                        <div class="text-xs text-slate-500">Desarrollo "Clean Room"</div>
+                    </div>
+                    <div class="text-slate-400 hidden md:block">➔</div>
+                    <div class="text-slate-400 md:hidden">⬇️</div>
+                    <div class="flex flex-col gap-2 w-full md:w-auto">
+                        <div class="bg-slate-700 text-white p-3 rounded text-center">XenonRecomp (CPU)</div>
+                        <div class="bg-slate-700 text-white p-3 rounded text-center">XenosRecomp (GPU)</div>
+                    </div>
+                    <div class="text-slate-400 hidden md:block">➔</div>
+                    <div class="text-slate-400 md:hidden">⬇️</div>
+                    <div class="bg-emerald-600 text-white p-4 rounded-lg text-center w-full md:w-auto shadow-lg">
+                        <div class="font-bold">Port Nativo</div>
+                        <div class="text-emerald-100 text-xs">Legal y Sostenible</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 5: Legal Framework -->
+        <section id="legalidad" class="scroll-mt-24">
+            <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-8 md:p-12">
+                <div class="text-center mb-10">
+                    <span
+                        class="inline-block bg-emerald-600 text-white px-4 py-1 rounded-full text-xs font-bold mb-4 uppercase">Marco
+                        Legal</span>
+                    <h2 class="text-3xl font-bold text-slate-900">⚖️ Consideraciones Legales</h2>
+                    <p class="mt-4 text-slate-600 max-w-2xl mx-auto">
+                        MrMonkeyShopWare está diseñado para la <strong>preservación personal y legal</strong> de juegos.
+                        Seguimos estrictamente los principios de "Clean Room" y respetamos los derechos de autor.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- What We DO -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-emerald-100">
+                        <h3 class="flex items-center gap-2 text-lg font-bold text-emerald-700 mb-4">
+                            <span class="text-2xl">✅</span> Este proyecto SÍ:
+                        </h3>
+                        <ul class="space-y-3 text-slate-700 text-sm">
+                            <li class="flex gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>Está diseñado para <strong>uso personal</strong> con discos originales que
+                                    posees</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>Proporciona herramientas para <strong>preservación digital</strong></span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>Respeta las leyes de <strong>ingeniería inversa para
+                                        interoperabilidad</strong></span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>Documenta explícitamente las <strong>bases legales</strong> para la
+                                    comunidad</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="text-emerald-500 font-bold">✓</span>
+                                <span>Es <strong>código abierto</strong> bajo licencia MIT</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- What We DON'T -->
+                    <div class="bg-white rounded-xl p-6 shadow-sm border border-red-100">
+                        <h3 class="flex items-center gap-2 text-lg font-bold text-red-700 mb-4">
+                            <span class="text-2xl">❌</span> Este proyecto NO:
+                        </h3>
+                        <ul class="space-y-3 text-slate-700 text-sm">
+                            <li class="flex gap-2">
+                                <span class="text-red-500 font-bold">✗</span>
+                                <span>Promueve ni facilita la <strong>piratería</strong></span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="text-red-500 font-bold">✗</span>
+                                <span>Distribuye <strong>ISOs, ROMs</strong> o archivos con copyright</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="text-red-500 font-bold">✗</span>
+                                <span>Incluye <strong>builds recompilados</strong> de juegos</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="text-red-500 font-bold">✗</span>
+                                <span>Proporciona <strong>claves de cifrado</strong> o contenido protegido</span>
+                            </li>
+                            <li class="flex gap-2">
+                                <span class="text-red-500 font-bold">✗</span>
+                                <span>Ofrece soporte para juegos que <strong>no poseas legalmente</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Legal Notice -->
+                <div class="mt-8 bg-amber-50 border border-amber-200 rounded-lg p-4 max-w-3xl mx-auto">
+                    <p class="text-sm text-amber-800 text-center">
+                        <strong>⚠️ Aviso:</strong> El usuario es responsable de cumplir con las leyes de su
+                        jurisdicción.
+                        MrMonkeyShopWare es una herramienta técnica y no se hace responsable del uso indebido.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Module 5: Interactive Tutorial (Workshop) -->
+        <section id="taller" class="scroll-mt-24 mb-20">
+            <div class="bg-slate-900 rounded-2xl overflow-hidden shadow-2xl text-white">
+                <div class="p-8 md:p-12 text-center">
+                    <h2 class="text-3xl font-bold mb-4">Taller de Recompilación</h2>
+                    <p class="text-slate-400 mb-8">Sigue los pasos técnicos para configurar tu entorno. Marca cada paso
+                        para avanzar.</p>
+
+                    <div class="max-w-3xl mx-auto text-left space-y-4">
+
+                        <!-- Step 1 -->
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700 flex gap-4 items-start transition-opacity"
+                            id="tut-step-1">
+                            <input type="checkbox" id="check1"
+                                class="mt-1.5 h-5 w-5 rounded border-slate-600 bg-slate-700 text-indigo-500 focus:ring-indigo-500 focus:ring-offset-slate-900 cursor-pointer"
+                                onchange="toggleStep(1)">
+                            <div class="flex-1">
+                                <label for="check1"
+                                    class="font-bold cursor-pointer hover:text-indigo-400 transition-colors">1.
+                                    Preparación de Herramientas</label>
+                                <div class="text-sm text-slate-400 mt-2">
+                                    <p class="mb-2">Instala Git, CMake (3.21+), Vcpkg y Python 3.11+. Luego clona los
+                                        repositorios:</p>
+                                    <code class="block bg-slate-950 p-2 rounded text-xs font-mono text-indigo-300">
+                                        git clone https://github.com/hedge-dev/XenonRecomp.git --recursive<br>
+                                        git clone https://github.com/hedge-dev/XenosRecomp.git --recursive
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700 flex gap-4 items-start opacity-50 pointer-events-none transition-opacity"
+                            id="tut-step-2">
+                            <input type="checkbox" id="check2"
+                                class="mt-1.5 h-5 w-5 rounded border-slate-600 bg-slate-700 text-indigo-500 focus:ring-indigo-500 focus:ring-offset-slate-900 cursor-pointer"
+                                onchange="toggleStep(2)">
+                            <div class="flex-1">
+                                <label for="check2"
+                                    class="font-bold cursor-pointer hover:text-indigo-400 transition-colors">2.
+                                    Recompilación de Shaders (GPU)</label>
+                                <div class="text-sm text-slate-400 mt-2">
+                                    <p class="mb-2">Extrae el microcódigo y conviértelo a HLSL:</p>
+                                    <code class="block bg-slate-950 p-2 rounded text-xs font-mono text-indigo-300">
+                                        python xenos_recomp.py --input shader_binaries/ --output generated_shaders/ --api d3d12
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700 flex gap-4 items-start opacity-50 pointer-events-none transition-opacity"
+                            id="tut-step-3">
+                            <input type="checkbox" id="check3"
+                                class="mt-1.5 h-5 w-5 rounded border-slate-600 bg-slate-700 text-indigo-500 focus:ring-indigo-500 focus:ring-offset-slate-900 cursor-pointer"
+                                onchange="toggleStep(3)">
+                            <div class="flex-1">
+                                <label for="check3"
+                                    class="font-bold cursor-pointer hover:text-indigo-400 transition-colors">3. Análisis
+                                    del Ejecutable (CPU)</label>
+                                <div class="text-sm text-slate-400 mt-2">
+                                    <p class="mb-2">Analiza el archivo <code>default.xex</code> para mapear funciones:
+                                    </p>
+                                    <code class="block bg-slate-950 p-2 rounded text-xs font-mono text-indigo-300">
+                                        python tools/XenonAnalyse.py --input default.xex --output analysis_data.json
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="bg-slate-800/50 p-4 rounded-lg border border-slate-700 flex gap-4 items-start opacity-50 pointer-events-none transition-opacity"
+                            id="tut-step-4">
+                            <input type="checkbox" id="check4"
+                                class="mt-1.5 h-5 w-5 rounded border-slate-600 bg-slate-700 text-indigo-500 focus:ring-indigo-500 focus:ring-offset-slate-900 cursor-pointer"
+                                onchange="toggleStep(4)">
+                            <div class="flex-1">
+                                <label for="check4"
+                                    class="font-bold cursor-pointer hover:text-indigo-400 transition-colors">4.
+                                    Compilación Final</label>
+                                <div class="text-sm text-slate-400 mt-2">
+                                    <p class="mb-2">Genera el proyecto CMake uniendo C++ y HLSL:</p>
+                                    <code class="block bg-slate-950 p-2 rounded text-xs font-mono text-indigo-300">
+                                        cmake --build . --config Release
+                                    </code>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="completion-message" class="hidden text-center py-6 animate-pulse">
+                            <span class="text-2xl text-green-400 font-bold">¡Sistema Listo! 🚀</span>
+                            <p class="text-sm text-slate-400">Has completado el flujo teórico de recompilación.</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- Referencias Section -->
+            <div class="mb-8">
+                <h3 class="text-center text-white font-bold text-lg mb-6">📚 Referencias y Recursos</h3>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <a href="https://github.com/hedge-dev/XenonRecomp" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 px-4 py-3 rounded-lg transition-colors">
+                        <span class="text-xl">🖥️</span>
+                        <div>
+                            <div class="text-white font-medium">XenonRecomp</div>
+                            <div class="text-xs text-slate-500">Núcleo CPU (PowerPC → C++)</div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/hedge-dev/XenosRecomp" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 px-4 py-3 rounded-lg transition-colors">
+                        <span class="text-xl">🎮</span>
+                        <div>
+                            <div class="text-white font-medium">XenosRecomp</div>
+                            <div class="text-xs text-slate-500">Núcleo GPU (Microcódigo → HLSL)</div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/MrMonkey09/MrMonkeyShopWare" target="_blank" rel="noopener noreferrer"
+                        class="flex items-center gap-2 bg-indigo-900 hover:bg-indigo-800 px-4 py-3 rounded-lg transition-colors border border-indigo-700">
+                        <span class="text-xl">⚖️</span>
+                        <div>
+                            <div class="text-white font-medium">MrMonkeyShopWare</div>
+                            <div class="text-xs text-indigo-300">Gestión Legal y Comunitaria</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Original Footer Content -->
+            <div class="text-center border-t border-slate-800 pt-8">
+                <p class="text-xs text-slate-600">Este SPA es una representación visual con fines educativos.
+                    MrMonkeyShopWare y XenonRecomp son proyectos independientes.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // --- 1. Charts Implementation ---
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // Paradigm Chart: Comparison of Overhead vs Stability
+            const ctxParadigm = document.getElementById('paradigmChart').getContext('2d');
+            new Chart(ctxParadigm, {
+                type: 'bar',
+                data: {
+                    labels: ['Emulación Tradicional', 'Recompilación Estática'],
+                    datasets: [
+                        {
+                            label: 'Carga de CPU (Overhead)',
+                            data: [90, 10], // High overhead for emulation, low for recomp
+                            backgroundColor: 'rgba(239, 68, 68, 0.7)', // Red
+                            borderColor: 'rgba(239, 68, 68, 1)',
+                            borderWidth: 1
+                        },
+                        {
+                            label: 'Estabilidad de FPS',
+                            data: [60, 95], // Lower stability for emulation, high for recomp
+                            backgroundColor: 'rgba(99, 102, 241, 0.7)', // Indigo
+                            borderColor: 'rgba(99, 102, 241, 1)',
+                            borderWidth: 1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: { display: false } // Abstract scale
+                        }
+                    },
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    return context.dataset.label + ': ' + (context.raw > 80 ? 'Alto' : 'Bajo/Óptimo');
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+
+            // Unleashed Chart: Frame Time Simulation
+            const ctxUnleashed = document.getElementById('unleashedChart').getContext('2d');
+
+            // Generate mock data: Spiky for emulation, flat for native
+            const labels = Array.from({ length: 20 }, (_, i) => i);
+            const dataEmu = labels.map(() => 33 + (Math.random() * 20 - 10)); // ~30fps with variance
+            const dataNative = labels.map(() => 16.6); // Locked 60fps (16.6ms)
+
+            new Chart(ctxUnleashed, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Xbox 360 / Emulación (30 FPS Inestable)',
+                            data: dataEmu,
+                            borderColor: 'rgba(148, 163, 184, 1)', // Slate
+                            borderWidth: 2,
+                            tension: 0.4,
+                            pointRadius: 0
+                        },
+                        {
+                            label: 'UnleashedRecomp (60 FPS Locked)',
+                            data: dataNative,
+                            borderColor: 'rgba(79, 70, 229, 1)', // Indigo
+                            borderWidth: 3,
+                            tension: 0.1,
+                            pointRadius: 0
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            title: { display: true, text: 'Frame Time (ms)' },
+                            suggestedMin: 0,
+                            suggestedMax: 60
+                        },
+                        x: { display: false }
+                    }
+                }
+            });
+        });
+
+        // --- 2. Architecture Tabs Logic ---
+        function switchTab(tab) {
+            // Update Buttons
+            document.getElementById('tab-cpu').className = tab === 'cpu'
+                ? 'px-8 py-3 text-sm font-medium border-b-2 border-indigo-600 text-indigo-600 focus:outline-none transition-colors'
+                : 'px-8 py-3 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-indigo-600 focus:outline-none transition-colors';
+
+            document.getElementById('tab-gpu').className = tab === 'gpu'
+                ? 'px-8 py-3 text-sm font-medium border-b-2 border-indigo-600 text-indigo-600 focus:outline-none transition-colors'
+                : 'px-8 py-3 text-sm font-medium border-b-2 border-transparent text-slate-500 hover:text-indigo-600 focus:outline-none transition-colors';
+
+            // Show Content
+            document.getElementById('content-cpu').classList.toggle('hidden', tab !== 'cpu');
+            document.getElementById('content-cpu').classList.toggle('grid', tab === 'cpu');
+            document.getElementById('content-gpu').classList.toggle('hidden', tab !== 'gpu');
+            document.getElementById('content-gpu').classList.toggle('grid', tab === 'gpu');
+        }
+
+        // --- 3. CPU Step Logic ---
+        const stepsData = {
+            step1: {
+                title: "1. Análisis de Flujo (XenonAnalyse)",
+                text: "Un binario original es un 'mar de números'. El análisis identifica las <strong>Jump Tables</strong> (tablas de salto) para mapear el flujo del código. Sin esto, el recompilador no sabría qué parte del código es una función ejecutable y qué parte son simples datos.",
+                code: "> XenonAnalyse.py --input default.xex<br>> Scanning for function epilogues...<br>> Found 14,203 functions.<br>> Identifying jump tables... OK."
+            },
+            step2: {
+                title: "2. Traducción de Arquitectura",
+                text: "XenonRecomp convierte el ensamblador PowerPC a C++. Un desafío crítico es el <strong>Endianness</strong>: la Xbox 360 es Big-Endian (lee bytes de izquierda a derecha), mientras que el PC es Little-Endian. El recompilador inserta macros de intercambio de bytes automáticamente.",
+                code: "// Ejemplo C++ Generado:<br>uint32_t val = mem::load<uint32_t>(addr);<br>val = _byteswap_ulong(val); // Fix Endianness<br>ppc::gpr[3] = val;"
+            },
+            step3: {
+                title: "3. Capa de Abstracción (HLE)",
+                text: "El código del juego intenta hablar con el sistema operativo de Xbox (XDK). La capa HLE (High Level Emulation) intercepta estas llamadas (como crear un hilo o leer el disco) y las redirige a APIs modernas de Windows (Win32) o Linux.",
+                code: "void XInputGetState_Hook(...) {<br>  // Redirigir llamada XInput de 360<br>  // a la API nativa de PC<br>  Native::GetControllerState(index);<br>}"
+            }
+        };
+
+        function showStep(stepKey) {
+            // Update Active Card Style
+            document.querySelectorAll('.step-card').forEach(el => el.classList.remove('active'));
+            event.currentTarget.classList.add('active');
+
+            // Update Content
+            const data = stepsData[stepKey];
+            const titleEl = document.getElementById('cpu-detail-title');
+            const textEl = document.getElementById('cpu-detail-text');
+            const codeEl = document.getElementById('code-snippet');
+
+            // Simple Fade Animation
+            titleEl.style.opacity = 0;
+            textEl.style.opacity = 0;
+            codeEl.style.opacity = 0;
+
+            setTimeout(() => {
+                titleEl.textContent = data.title;
+                textEl.innerHTML = data.text;
+                codeEl.innerHTML = data.code;
+
+                titleEl.style.opacity = 1;
+                textEl.style.opacity = 1;
+                codeEl.style.opacity = 1;
+            }, 200);
+        }
+
+        // --- 4. Tutorial Logic ---
+        function toggleStep(num) {
+            const checkbox = document.getElementById(`check${num}`);
+            const nextStep = document.getElementById(`tut-step-${num + 1}`);
+
+            if (checkbox.checked) {
+                // If checking the box
+                if (nextStep) {
+                    nextStep.classList.remove('opacity-50', 'pointer-events-none');
+                } else {
+                    // Finished
+                    document.getElementById('completion-message').classList.remove('hidden');
+                }
+            } else {
+                // If unchecking, disable subsequent steps
+                for (let i = num + 1; i <= 4; i++) {
+                    const step = document.getElementById(`tut-step-${i}`);
+                    const cb = document.getElementById(`check${i}`);
+                    if (step) step.classList.add('opacity-50', 'pointer-events-none');
+                    if (cb) cb.checked = false;
+                }
+                document.getElementById('completion-message').classList.add('hidden');
+            }
+        }
+
+    </script>
+</body>
+
+</html>
