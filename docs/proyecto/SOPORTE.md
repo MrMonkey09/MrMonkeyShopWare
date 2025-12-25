@@ -21,11 +21,11 @@ Cómo obtener ayuda con MrMonkeyShopWare.
 
 ### GitHub Discussions
 Para preguntas, ideas y discusiones generales:
-- [github.com/MrMonkey/MrMonkeyShopWare/discussions](https://github.com/MrMonkey/MrMonkeyShopWare/discussions)
+- [github.com/MrMonkey09/MrMonkeyShopWare/discussions](https://github.com/MrMonkey09/MrMonkeyShopWare/discussions)
 
 ### Issues
 Para reportar bugs o solicitar funcionalidades:
-- [github.com/MrMonkey/MrMonkeyShopWare/issues](https://github.com/MrMonkey/MrMonkeyShopWare/issues)
+- [github.com/MrMonkey09/MrMonkeyShopWare/issues](https://github.com/MrMonkey09/MrMonkeyShopWare/issues)
 
 ---
 

@@ -42,7 +42,7 @@ git clone https://github.com/TU_USUARIO/MrMonkeyShopWare.git
 cd MrMonkeyShopWare
 
 # 3. Añade remote upstream
-git remote add upstream https://github.com/MrMonkey/MrMonkeyShopWare.git
+git remote add upstream https://github.com/MrMonkey09/MrMonkeyShopWare.git
 
 # 4. Crea entorno virtual
 python -m venv venv
@@ -309,7 +309,7 @@ Los colaboradores serán reconocidos en:
 
 ## ❓ ¿Preguntas?
 
-- Abre una [Discusión](https://github.com/MrMonkey/MrMonkeyShopWare/discussions)
+- Abre una [Discusión](https://github.com/MrMonkey09/MrMonkeyShopWare/discussions)
 - Revisa las [FAQ](./faq.md)
 - Contacta a los mantenedores
 

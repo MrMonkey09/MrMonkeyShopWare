@@ -90,5 +90,5 @@ Verifica que el ISO no esté corrupto y que extract-xiso esté correctamente ins
 
 ## 💬 ¿Más preguntas?
 
-- Abre un [Issue en GitHub](https://github.com/MrMonkey/MrMonkeyShopWare/issues)
-- Únete a las [Discusiones](https://github.com/MrMonkey/MrMonkeyShopWare/discussions)
+- Abre un [Issue en GitHub](https://github.com/MrMonkey09/MrMonkeyShopWare/issues)
+- Únete a las [Discusiones](https://github.com/MrMonkey09/MrMonkeyShopWare/discussions)

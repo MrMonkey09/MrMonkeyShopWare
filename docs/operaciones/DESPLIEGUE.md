@@ -11,7 +11,7 @@ pip install mrmonkeyshopware
 ### Instalación desde código fuente
 
 ```bash
-git clone https://github.com/MrMonkey/MrMonkeyShopWare.git
+git clone https://github.com/MrMonkey09/MrMonkeyShopWare.git
 cd MrMonkeyShopWare
 pip install -e .
 ```

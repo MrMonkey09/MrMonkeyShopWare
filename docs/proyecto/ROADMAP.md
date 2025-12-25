@@ -58,7 +58,7 @@ Plan de desarrollo futuro del proyecto.
 
 ## 🤝 Contribuir al Roadmap
 
-¿Tienes ideas? Abre un [Issue](https://github.com/MrMonkey/MrMonkeyShopWare/issues) con la etiqueta `mejora`.
+¿Tienes ideas? Abre un [Issue](https://github.com/MrMonkey09/MrMonkeyShopWare/issues) con la etiqueta `mejora`.
 
 ---
 

@@ -222,7 +222,7 @@ Puedes editarlo manualmente si lo necesitas:
 ## 🆘 ¿Problema no listado?
 
 1. Revisa los [logs](../operaciones/logs.md) de la aplicación
-2. Abre un [Issue en GitHub](https://github.com/MrMonkey/MrMonkeyShopWare/issues/new) con:
+2. Abre un [Issue en GitHub](https://github.com/MrMonkey09/MrMonkeyShopWare/issues/new) con:
    - Descripción del error
    - Capturas de pantalla
    - Logs relevantes

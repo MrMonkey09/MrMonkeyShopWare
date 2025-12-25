@@ -68,6 +68,7 @@ docs/
 │   └── solucion-problemas.md
 │
 ├── 📂 proyecto/                     # 📊 Gestión del proyecto
+│   ├── ESTUDIO.md                   # 🆕 Guía Maestra de Recompilación
 │   ├── VISION.md
 │   ├── ROADMAP.md
 │   ├── SEGURIDAD.md
@@ -147,6 +148,7 @@ docs/
 ---
 
 ### 7. 📊 Gestión del Proyecto
+- [ESTUDIO.md](./proyecto/ESTUDIO.md) - 🆕 Guía Maestra: Recompilación Estática Xbox 360 → PC
 - [VISION.md](./proyecto/VISION.md) - Visión y objetivos
 - [ROADMAP.md](./proyecto/ROADMAP.md) - Planes futuros
 - [SEGURIDAD.md](./proyecto/SEGURIDAD.md) - Políticas de seguridad
@@ -182,11 +184,11 @@ docs/
 | api/ | 6 | ✅ Completo |
 | desarrollo/ | 5 | ✅ Completo |
 | operaciones/ | 4 | ✅ Completo |
-| proyecto/ | 4 | ✅ Completo |
+| proyecto/ | 5 | ✅ Completo |
 | tutoriales/ | 6 | ✅ Completo |
 | herramientas/ | 4 | ✅ Completo |
 
-> 📊 **Total: 40 documentos organizados en 9 carpetas**
+> 📊 **Total: 41 documentos organizados en 9 carpetas**
 
 ---
 
@@ -200,8 +202,8 @@ docs/
 
 ## 📞 ¿Necesitas Ayuda?
 
-- 💬 [GitHub Discussions](https://github.com/MrMonkey/MrMonkeyShopWare/discussions)
-- 🐛 [Issue Tracker](https://github.com/MrMonkey/MrMonkeyShopWare/issues)
+- 💬 [GitHub Discussions](https://github.com/MrMonkey09/MrMonkeyShopWare/discussions)
+- 🐛 [Issue Tracker](https://github.com/MrMonkey09/MrMonkeyShopWare/issues)
 - � [Soporte](./proyecto/SOPORTE.md)
 
 ---

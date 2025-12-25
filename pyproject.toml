@@ -42,10 +42,10 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/MrMonkey/MrMonkeyShopWare"
-Documentation = "https://github.com/MrMonkey/MrMonkeyShopWare/tree/main/docs"
-Repository = "https://github.com/MrMonkey/MrMonkeyShopWare.git"
-Issues = "https://github.com/MrMonkey/MrMonkeyShopWare/issues"
+Homepage = "https://github.com/MrMonkey09/MrMonkeyShopWare"
+Documentation = "https://github.com/MrMonkey09/MrMonkeyShopWare/tree/main/docs"
+Repository = "https://github.com/MrMonkey09/MrMonkeyShopWare.git"
+Issues = "https://github.com/MrMonkey09/MrMonkeyShopWare/issues"
 
 [project.scripts]
 mrmonkey-gui = "src.gui.main:main"

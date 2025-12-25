@@ -20,7 +20,7 @@ Antes de comenzar, asegúrate de tener:
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/MrMonkey/MrMonkeyShopWare.git
+git clone https://github.com/MrMonkey09/MrMonkeyShopWare.git
 cd MrMonkeyShopWare
 ```
 
