@@ -57,6 +57,7 @@ docs/
 │   ├── CONTRIBUIR.md
 │   ├── CODIGO_DE_CONDUCTA.md
 │   ├── DESARROLLO.md
+│   ├── FLUJO_GIT.md                 # 🆕 Flujo de trabajo Git
 │   ├── PRUEBAS.md
 │   └── GUIA_DE_ESTILO.md
 │
