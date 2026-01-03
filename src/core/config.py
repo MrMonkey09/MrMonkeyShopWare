@@ -66,9 +66,19 @@ XENON_RECOMP_PATH = _load_settings_value(
     r"C:\tools\XenonRecompUnlimited\build\XenonRecomp\Debug\XenonRecomp.exe"
 )
 
+XENOS_RECOMP_PATH = _load_settings_value(
+    "XENOS_RECOMP_PATH",
+    r"C:\tools\XenosRecomp\build\XenosRecomp.exe"
+)
+
 PPC_CONTEXT_PATH = _load_settings_value(
     "PPC_CONTEXT_PATH",
     r"C:\tools\XenonRecomp\XenonUtils\ppc_context.h"
+)
+
+SHADER_COMMON_PATH = _load_settings_value(
+    "SHADER_COMMON_PATH",
+    r"C:\tools\XenosRecomp\shader_common.h"
 )
 
 # Carpeta base para temporales del proyecto
@@ -85,6 +95,7 @@ def reload_config():
     """
     global XENON_ANALYSE_PATH, XEXTOOL_PATH, EXTRACT_XISO_PATH
     global DISC_IMAGE_CREATOR_PATH, XENON_RECOMP_PATH, PPC_CONTEXT_PATH
+    global XENOS_RECOMP_PATH, SHADER_COMMON_PATH
     
     XENON_ANALYSE_PATH = _load_settings_value(
         "XENON_ANALYSE_PATH",
@@ -106,8 +117,16 @@ def reload_config():
         "XENON_RECOMP_PATH",
         r"C:\tools\XenonRecompUnlimited\build\XenonRecomp\Debug\XenonRecomp.exe"
     )
+    XENOS_RECOMP_PATH = _load_settings_value(
+        "XENOS_RECOMP_PATH",
+        r"C:\tools\XenosRecomp\build\XenosRecomp.exe"
+    )
     PPC_CONTEXT_PATH = _load_settings_value(
         "PPC_CONTEXT_PATH",
         r"C:\tools\XenonRecomp\XenonUtils\ppc_context.h"
+    )
+    SHADER_COMMON_PATH = _load_settings_value(
+        "SHADER_COMMON_PATH",
+        r"C:\tools\XenosRecomp\shader_common.h"
     )
 

@@ -11,6 +11,7 @@
 | Documento | Descripción | Audiencia |
 |-----------|-------------|-----------|
 | [Primeros Pasos](./guias/primeros-pasos.md) | Instalación y primeros pasos | Nuevos Usuarios |
+| [🆕 Recompilación Xbox 360](./guias/recompilacion-xbox360.md) | Pipeline completo de recompilación | Colaboradores |
 | [Arquitectura](./arquitectura/arquitectura.md) | Diseño del sistema y componentes | Desarrolladores |
 | [Contribuir](./desarrollo/CONTRIBUIR.md) | Cómo contribuir al proyecto | Colaboradores |
 | [Referencia API](./api/README.md) | Documentación de módulos | Desarrolladores |
@@ -28,6 +29,7 @@ docs/
 │   ├── primeros-pasos.md
 │   ├── requisitos.md
 │   ├── inicio-rapido.md
+│   ├── recompilacion-xbox360.md     # 🆕 Pipeline de recompilación
 │   └── faq.md
 │
 ├── 📂 arquitectura/                 # 🏗️ Diseño del sistema
@@ -50,8 +52,9 @@ docs/
 │   ├── cleaner.md
 │   ├── database.md
 │   ├── pipeline.md
-│   ├── xex-parser.md                # 🆕 Parser de metadata XexTool
-│   └── toml-generator.md
+│   ├── xex-parser.md                # Parser de metadata XexTool
+│   ├── toml-generator.md
+│   └── modulos-recompilacion.md     # 🆕 API de recompilación
 │
 ├── 📂 desarrollo/                   # 🛠️ Guías de desarrollo
 │   ├── CONTRIBUIR.md
@@ -81,13 +84,15 @@ docs/
 │   ├── guia-analisis.md
 │   ├── guia-recompilacion.md
 │   ├── guia-cmake.md
-│   └── guia-respaldos.md            # 🆕 Usar respaldos existentes (USB/ISO)
+│   ├── guia-respaldos.md            # Usar respaldos existentes (USB/ISO)
+│   └── primer-proyecto-recompilacion.md  # 🆕 Tu primer proyecto de recomp
 │
 └── 📂 herramientas/                 # 🔧 Herramientas externas
 │   ├── disc-image-creator.md
 │   ├── extract-xiso.md
 │   ├── xextool.md
-│   └── xenon-recomp.md
+│   ├── xenon-recomp.md
+│   └── configuracion-recompilacion.md  # 🆕 Configurar herramientas recomp
 │
 └── 📂 capturas/                     # 📸 Capturas de pantalla
     └── (imágenes para documentación)
@@ -102,6 +107,7 @@ docs/
 - [requisitos.md](./guias/requisitos.md) - Requisitos del sistema y dependencias
 - [inicio-rapido.md](./guias/inicio-rapido.md) - Tutorial de inicio en 5 minutos
 - [faq.md](./guias/faq.md) - Preguntas frecuentes
+- 🆕 [recompilacion-xbox360.md](./guias/recompilacion-xbox360.md) - **Pipeline de recompilación Xbox 360**
 
 ---
 
@@ -127,6 +133,7 @@ docs/
 - [analyser.md](./api/analyser.md) - API de análisis
 - [cleaner.md](./api/cleaner.md) - API de limpieza
 - [toml-generator.md](./api/toml-generator.md) - API de TOML
+- 🆕 [modulos-recompilacion.md](./api/modulos-recompilacion.md) - **API de recompilación**
 
 ---
 
